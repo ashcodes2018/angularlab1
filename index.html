@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width", initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
 <title>To Do List angular</title>
@@ -14,7 +15,7 @@
         <p>A place to store the things  you have to do!</p>
         <input id="searchbox" type="text" name="searchtodos" placeholder="Filter your to-dos" ng-model="todoFilter">
         <ol>
-            <li ng-repeat="task in form.todoList | filter : todoFilter track by $index">{{task}}<span ng-click="form.removeTodo($index)">X</span></li>
+            <li ng-repeat="task in form.todoList | filter : todoFilter track by $index">{{task}}<span ng-click="form.removeTodo($index)"><i class="material-icons">close</i></span></li>
         </ol>
         <input id="addbox" type="text" name="newtodos" placeholder="Add your todos" ng-model="todoAdd" >
         <p><button id="buttonstyle" ng-click="form.addTodo(todoAdd)">Add</button></p>
